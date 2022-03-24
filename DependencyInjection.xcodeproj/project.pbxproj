@@ -15,10 +15,11 @@
 		AAF03BC827E6EDD800937D45 /* DependencyInjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BC727E6EDD800937D45 /* DependencyInjectionTests.swift */; };
 		AAF03BD227E6EDD800937D45 /* DependencyInjectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BD127E6EDD800937D45 /* DependencyInjectionUITests.swift */; };
 		AAF03BD427E6EDD800937D45 /* DependencyInjectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BD327E6EDD800937D45 /* DependencyInjectionUITestsLaunchTests.swift */; };
-		AAF03BE127E6F0D200937D45 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BE027E6F0D200937D45 /* ViewModel.swift */; };
+		AAF03BE127E6F0D200937D45 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BE027E6F0D200937D45 /* MainViewModel.swift */; };
 		AAF03BE327E6F0D900937D45 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BE227E6F0D900937D45 /* Repository.swift */; };
 		AAF03BE527E6F12200937D45 /* InjectionStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BE427E6F12200937D45 /* InjectionStoryboard.swift */; };
 		AAF03BE727E6F3C400937D45 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BE627E6F3C400937D45 /* BaseViewController.swift */; };
+		C4E069E227EBF14F00F0FD05 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E069E127EBF14F00F0FD05 /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +52,11 @@
 		AAF03BCD27E6EDD800937D45 /* DependencyInjectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DependencyInjectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF03BD127E6EDD800937D45 /* DependencyInjectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionUITests.swift; sourceTree = "<group>"; };
 		AAF03BD327E6EDD800937D45 /* DependencyInjectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AAF03BE027E6F0D200937D45 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		AAF03BE027E6F0D200937D45 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		AAF03BE227E6F0D900937D45 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		AAF03BE427E6F12200937D45 /* InjectionStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionStoryboard.swift; sourceTree = "<group>"; };
 		AAF03BE627E6F3C400937D45 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C4E069E127EBF14F00F0FD05 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +107,10 @@
 		AAF03BAF27E6EDD100937D45 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
+				C4E069E327EBF18800F0FD05 /* Base */,
 				AAF03BB027E6EDD100937D45 /* AppDelegate.swift */,
 				AAF03BB427E6EDD100937D45 /* ViewController.swift */,
-				AAF03BE627E6F3C400937D45 /* BaseViewController.swift */,
-				AAF03BE427E6F12200937D45 /* InjectionStoryboard.swift */,
-				AAF03BE027E6F0D200937D45 /* ViewModel.swift */,
+				AAF03BE027E6F0D200937D45 /* MainViewModel.swift */,
 				AAF03BE227E6F0D900937D45 /* Repository.swift */,
 				AAF03BB627E6EDD100937D45 /* Main.storyboard */,
 				AAF03BB927E6EDD800937D45 /* Assets.xcassets */,
@@ -134,6 +135,16 @@
 				AAF03BD327E6EDD800937D45 /* DependencyInjectionUITestsLaunchTests.swift */,
 			);
 			path = DependencyInjectionUITests;
+			sourceTree = "<group>";
+		};
+		C4E069E327EBF18800F0FD05 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AAF03BE427E6F12200937D45 /* InjectionStoryboard.swift */,
+				AAF03BE627E6F3C400937D45 /* BaseViewController.swift */,
+				C4E069E127EBF14F00F0FD05 /* ViewModelType.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,10 +280,11 @@
 			files = (
 				AAF03BB527E6EDD100937D45 /* ViewController.swift in Sources */,
 				AAF03BE527E6F12200937D45 /* InjectionStoryboard.swift in Sources */,
-				AAF03BE127E6F0D200937D45 /* ViewModel.swift in Sources */,
+				AAF03BE127E6F0D200937D45 /* MainViewModel.swift in Sources */,
 				AAF03BB127E6EDD100937D45 /* AppDelegate.swift in Sources */,
 				AAF03BE327E6F0D900937D45 /* Repository.swift in Sources */,
 				AAF03BE727E6F3C400937D45 /* BaseViewController.swift in Sources */,
+				C4E069E227EBF14F00F0FD05 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z4H456LU8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DependencyInjection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -477,6 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z4H456LU8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DependencyInjection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

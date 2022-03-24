@@ -49,8 +49,8 @@ final class _DependencyInjectionStoryboard {
                 return viewController
             }
             
-            guard let baseViewController = viewController as? BaseViewController,
-                  let coder = baseViewController.coder else {
+            guard let defaultViewController = viewController as? DefaultViewController,
+                  let coder = defaultViewController.coder else {
                 return viewController
             }
             

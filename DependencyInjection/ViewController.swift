@@ -7,50 +7,36 @@
 
 import UIKit
 
-class ViewController: BaseViewController {
+class ViewController: BaseViewController<MainViewModel<MainViewModelInput, MainViewModelOutput>> {
+  typealias VM = MainViewModel<MainViewModelInput, MainViewModelOutput>
+  
+  @IBOutlet weak var label: UILabel!
+  
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+  }
+  
+  required init?(coder: NSCoder, viewModel: VM? = nil) {
+    super.init(coder: coder, viewModel: viewModel)
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    @IBOutlet weak var label: UILabel!
+    self.configureView()
+    self.configureBinding()
+  }
+  
+  private func configureView() {
+    self.view.backgroundColor = .systemTeal
+  }
+  
+  private func configureBinding() {
+    guard let load = self.viewModel?.display() else {
+      return
+    }
     
+    self.label.text = load
+  }
 }
-    
-final class GenericViewController<R: Repository>: ViewController {
-        
-    static func instantiate(viewModel: ViewModel<R>) -> ViewController? {
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(
-            identifier: "ViewController"
-        ) {
-            GenericViewController(coder: $0, viewModel: viewModel)
-        } as? ViewController
-        
-        return viewController
-    }
-    
-    init?(coder: NSCoder, viewModel: ViewModel<R>) {
-        super.init(coder: coder)
-        self.viewModel = viewModel
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("use instantiate(param:) instead")
-    }
-    
-    private var viewModel: ViewModel<R>?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.configureView()
-        self.configureBinding()
-    }
-    
-    private func configureView() {
-        self.view.backgroundColor = .systemTeal
-        
-        self.label.text = "안녕하세요!"
-    }
-    
-    private func configureBinding() { }
-}
-    
 
