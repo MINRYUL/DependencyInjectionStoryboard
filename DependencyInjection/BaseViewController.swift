@@ -8,11 +8,21 @@
 import Foundation
 import UIKit
 
-class BaseViewController: UIViewController {
-    var coder: NSCoder?
+class BaseViewController<VM: ViewModel>: UIViewController {
+    private var viewModel: VM?
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.coder = coder
+    static func instantiate(
+        viewModel: VM,
+        storyBoardName: String,
+        identifier: String,
+        bundle: Bundle? = nil
+    ) -> BaseViewController? {
+        let storyBoard = UIStoryboard.init(name: storyBoardName, bundle: bundle)
+        let viewController = storyBoard.instantiateViewController(
+            identifier: identifier
+        ) as? Self
+        
+        viewController?.viewModel = viewModel
+        return viewController
     }
 }

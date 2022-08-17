@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAEC4EB028ACFF8E0075EDFB /* AnyObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC4EAF28ACFF8E0075EDFB /* AnyObject+Extension.swift */; };
 		AAF03BB127E6EDD100937D45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BB027E6EDD100937D45 /* AppDelegate.swift */; };
 		AAF03BB527E6EDD100937D45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF03BB427E6EDD100937D45 /* ViewController.swift */; };
 		AAF03BB827E6EDD100937D45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF03BB627E6EDD100937D45 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AAEC4EAF28ACFF8E0075EDFB /* AnyObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyObject+Extension.swift"; sourceTree = "<group>"; };
 		AAF03BAD27E6EDD100937D45 /* DependencyInjection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DependencyInjection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF03BB027E6EDD100937D45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAF03BB427E6EDD100937D45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,11 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				AAF03BB027E6EDD100937D45 /* AppDelegate.swift */,
-				AAF03BB427E6EDD100937D45 /* ViewController.swift */,
 				AAF03BE627E6F3C400937D45 /* BaseViewController.swift */,
-				AAF03BE427E6F12200937D45 /* InjectionStoryboard.swift */,
+				AAF03BB427E6EDD100937D45 /* ViewController.swift */,
 				AAF03BE027E6F0D200937D45 /* ViewModel.swift */,
 				AAF03BE227E6F0D900937D45 /* Repository.swift */,
+				AAF03BE427E6F12200937D45 /* InjectionStoryboard.swift */,
+				AAEC4EAF28ACFF8E0075EDFB /* AnyObject+Extension.swift */,
 				AAF03BB627E6EDD100937D45 /* Main.storyboard */,
 				AAF03BB927E6EDD800937D45 /* Assets.xcassets */,
 				AAF03BBB27E6EDD800937D45 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 			files = (
 				AAF03BB527E6EDD100937D45 /* ViewController.swift in Sources */,
 				AAF03BE527E6F12200937D45 /* InjectionStoryboard.swift in Sources */,
+				AAEC4EB028ACFF8E0075EDFB /* AnyObject+Extension.swift in Sources */,
 				AAF03BE127E6F0D200937D45 /* ViewModel.swift in Sources */,
 				AAF03BB127E6EDD100937D45 /* AppDelegate.swift in Sources */,
 				AAF03BE327E6F0D900937D45 /* Repository.swift in Sources */,

@@ -27,6 +27,9 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="label" destination="hGe-fj-T5i" id="Bqa-ow-X6D"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="label" destination="hGe-fj-T5i" id="XVC-Ym-l65"/>

@@ -21,40 +21,20 @@ final class _DependencyInjectionStoryboard {
     }
     
     func instantiateViewController(
-        identifier: String,
-        creator: ((NSCoder) -> UIViewController?)? = nil
+        identifier: String
     ) -> UIViewController? {
         
         var viewController: UIViewController? = nil
         
         if #available(iOS 13.0, *) {
-            guard creator != nil else {
-                return self.storyBoard.instantiateViewController(
-                    identifier: identifier
-                )
-            }
-            
-            viewController = self.storyBoard.instantiateViewController(
+            return self.storyBoard.instantiateViewController(
                 identifier: identifier
-            ) {
-                creator?($0)
-            }
+            )
             
         } else {
             viewController = self.storyBoard.instantiateViewController(
                 withIdentifier: identifier
             )
-            
-            guard creator != nil else {
-                return viewController
-            }
-            
-            guard let baseViewController = viewController as? BaseViewController,
-                  let coder = baseViewController.coder else {
-                return viewController
-            }
-            
-            viewController = creator?(coder)
             
         }
         

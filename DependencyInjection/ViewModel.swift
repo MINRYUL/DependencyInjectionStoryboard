@@ -7,11 +7,26 @@
 
 import Foundation
 
-struct ViewModel<R: Repository> {
-
-    private var repository: R?
+protocol ViewModel {
+    associatedtype Input
+    associatedtype Output
     
-    init(repository: R) {
-        self.repository = repository
+    var input: Input { get }
+    var output: Output { get }
+}
+
+protocol ViewModelInput { }
+protocol ViewModelOutput { }
+
+struct GenericViewModelInput: ViewModelInput { }
+struct GenericViewModelOuput: ViewModelOutput { }
+
+struct DefaultGenericViewModel<Input: ViewModelInput, Output: ViewModelOutput>: ViewModel {
+    var input: GenericViewModelInput
+    var output: GenericViewModelOuput
+    
+    init() {
+        self.input = GenericViewModelInput()
+        self.output = GenericViewModelOuput()
     }
 }

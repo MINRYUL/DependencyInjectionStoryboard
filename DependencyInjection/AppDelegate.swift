@@ -15,11 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        guard let viewController = GenericViewController<DefaultRepository>
+        guard let viewController = GenericViewController
             .instantiate(
-                viewModel: ViewModel(
-                    repository: DefaultRepository()
-                )
+                viewModel: DefaultGenericViewModel(),
+                storyBoardName: "Main",
+                identifier: GenericViewController.className,
+                bundle: nil
             ) else {
             return true
         }
